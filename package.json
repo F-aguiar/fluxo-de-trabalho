@@ -1,5 +1,8 @@
 {
   "dependencies": {
-    "git": "^0.1.5"
+    "@nestjs/typeorm": "^10.0.2",
+    "git": "^0.1.5",
+    "pg": "^8.13.1",
+    "typeorm": "^0.3.20"
   }
 }
