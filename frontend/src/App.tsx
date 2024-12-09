@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+// src/App.js
+
+import React, { useState } from 'react';
+import AreasList from './components/ProcessList';
+import UpdateArea from './components/UpdateProcess';
+import DeleteArea from './components/DeleteProcess';
+import CreateProcess from './components/CreateProcess';
 
 function App() {
+  const [selectedAreaId, setSelectedAreaId] = useState(null);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Gerenciamento de Áreas</h1>
+      
+      <CreateProcess areaId={undefined} onProcessCreated={undefined} />  {}
+      {selectedAreaId && (
+        <>
+          <UpdateArea areaId={selectedAreaId} /> {}
+          <DeleteArea areaId={selectedAreaId} /> {}
+        </>
+      )}
+      
+      <AreasList />  {}
     </div>
   );
 }
