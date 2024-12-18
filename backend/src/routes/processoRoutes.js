@@ -4,7 +4,6 @@ import Processo from "../models/Processo.js"
 const router = express.Router();
 
 // Rota GET - Buscar todos os processos
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 router.get("/", async (_req, res) => {
   try {
     const processos = await Processo.getAllProcessos();

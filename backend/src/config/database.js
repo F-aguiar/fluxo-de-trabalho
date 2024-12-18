@@ -7,8 +7,8 @@ dotenv.config();
 const pool = new Pool({
   user: process.env.postgres || "postgres",
   host: process.env.localhost || "localhost",
-  database: process.env.database || "maptech",
-  password: process.env.admin || "123456",
+  database: process.env.database || "database",
+  password: process.env.admin123 || "admin123",
   port: process.env.DB_PORT || 5432,
 });
 
